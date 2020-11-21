@@ -10,9 +10,11 @@ class App extends Component {
   }
 
   render() {
+    const { lights } = this.props
+    
     return (
       <div>
-        <LightsContainer lights={this.props.lights} />
+        <LightsContainer lights={lights} />
       </div>
     );
   }
