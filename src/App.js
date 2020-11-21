@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Light from './components/lights/Light'
+import LightsContainer from './containers/LightsContainer'
 import { connect } from 'react-redux'
 import { fetchLights } from './actions/lights.actions'
 
@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Light />
+        <LightsContainer lights={this.props.lights} />
       </div>
     );
   }
