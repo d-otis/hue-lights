@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Light from './components/lights/Light.component'
+import Light from './components/lights/Light'
 
 class App extends Component {
   render() {
