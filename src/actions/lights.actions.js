@@ -6,6 +6,6 @@ export function fetchLights() {
     dispatch({type: 'LOADING_LIGHTS'})
     fetch(`${BASE_URL}/${USERNAME}/lights`)
       .then(res => res.json())
-      .then(json => console.log(json))
+      .then(json => dispatch({type: 'SET_LIGHTS', payload: json}))
   }
 }
