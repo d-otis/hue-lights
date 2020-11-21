@@ -10,7 +10,7 @@ export function fetchLights() {
   }
 }
 
-export function toggleLight(id, status) {
+export function toggleLight(id, isOn) {
   return dispatch => {
     fetch(`${BASE_URL}/${USERNAME}/lights/${id}/state`, {
       method: "PUT",
@@ -18,7 +18,7 @@ export function toggleLight(id, status) {
         "Accept": "application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({"on": !status})
+      body: JSON.stringify({"on": isOn})
     })
       .then(res => res.json())
       .then(json => dispatch({type: 'TOGGLE_LIGHT', payload: json}))
