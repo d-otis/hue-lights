@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import LightsContainer from './containers/LightsContainer'
 import { connect } from 'react-redux'
 import { fetchLights } from './actions/lights.actions'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
 
@@ -11,11 +12,11 @@ class App extends Component {
 
   render() {
     const { lights } = this.props
-    
+
     return (
-      <div>
-        <LightsContainer lights={lights} />
-      </div>
+      <Router>
+        <Route exact path="/lights" render={(renderProps) => <LightsContainer lights={lights} />} />
+      </Router>
     );
   }
 }
