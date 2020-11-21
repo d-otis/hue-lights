@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Light = ({ id, light }) => {
 
-  const { name, state } = light
+const Light = ({ id, light, toggleLight }) => {
 
-  const [ isOn, setIsOn ] = useState(state.on)
+  const { name, state: { on: isOn } } = light
 
   const handleClick = () => {
     setIsOn(!isOn)
