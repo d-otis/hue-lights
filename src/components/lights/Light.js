@@ -1,5 +1,6 @@
 import React from 'react'
-
+import Switch from '@material-ui/core/Switch'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
 
 const Light = ({ id, light, toggleLight }) => {
 
@@ -12,7 +13,10 @@ const Light = ({ id, light, toggleLight }) => {
   return(
     <React.Fragment>
       <h1 style={{color: isOn ? 'green' : 'red' }} > {name} </h1>
-      <button onClick={handleClick}>Turn {isOn ? 'Off' : 'On'}</button>
+      <FormControlLabel
+        control={<Switch checked={isOn} onChange={handleClick} name="checkedA" color="primary"/>}
+        label={isOn ? 'On' : 'Off'}
+      />
       <hr/>
     </React.Fragment>
   )
