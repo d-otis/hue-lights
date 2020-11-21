@@ -5,3 +5,5 @@ const Light = () => {
     <h1>Light Component</h1>
   )
 }
+
+export default Light
