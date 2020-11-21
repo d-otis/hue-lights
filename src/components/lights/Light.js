@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Light = ({ light }) => {
+const Light = ({ id, light }) => {
 
   const { name } = light
 
