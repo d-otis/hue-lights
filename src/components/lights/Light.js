@@ -6,17 +6,7 @@ const Light = ({ id, light, toggleLight }) => {
   const { name, state: { on: isOn } } = light
 
   const handleClick = () => {
-    setIsOn(!isOn)
-    fetch(`${BASE_URL}/${USERNAME}/lights/${id}/state`, {
-      method: "PUT",
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({"on": isOn})
-    })
-      .then(res => res.json())
-      .then(json => console.log(json))
+    toggleLight(id, !isOn)
   }
 
   return(
