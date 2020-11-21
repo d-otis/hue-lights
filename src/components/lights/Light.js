@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-import { BASE_URL } from '../../utils/baseURL.utils'
-import { USERNAME } from '../../utils/username.utils'
+import React from 'react'
 
 const Light = ({ id, light }) => {
 
