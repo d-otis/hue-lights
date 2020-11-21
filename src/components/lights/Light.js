@@ -1,8 +1,11 @@
 import React from 'react'
 
-const Light = () => {
+const Light = ({ light }) => {
+
+  const { name } = light
+
   return(
-    <h1>Light Component</h1>
+    <h1> {name} </h1>
   )
 }
 
