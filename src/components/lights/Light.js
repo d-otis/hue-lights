@@ -23,7 +23,11 @@ const Light = ({ id, light }) => {
   }
 
   return(
-    <h1> {name} </h1>
+    <React.Fragment>
+      <h1 style={{color: isOn ? 'green' : 'red' }} > {name} </h1>
+      <button onClick={handleClick}>Turn {isOn ? 'Off' : 'On'}</button>
+      <hr/>
+    </React.Fragment>
   )
 }
 
