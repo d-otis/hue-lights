@@ -6,7 +6,7 @@ const PowerSwitch = ({ id, isOn, updateLight }) => {
   // debugger
   return(
     <FormControlLabel
-    control={<Switch checked={isOn} onChange={() => toggleLight(id, !isOn)} name="checkedA" color="primary"/>}
+    control={<Switch checked={isOn} onChange={() => updateLight(id, "on", !isOn)} name="checkedA" color="primary"/>}
     label={isOn ? 'On' : 'Off'}
   />
   )
