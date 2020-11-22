@@ -5,7 +5,7 @@ import ColorPicker from './ColorPicker'
 
 const Light = ({ id, light, ...otherProps }) => {
 
-  const { name, state: { on: isOn, bri: brightness } } = light
+  const { name, state: { on: isOn, bri: brightness, hue, sat } } = light
 
   return(
     <React.Fragment>
