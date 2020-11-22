@@ -22,6 +22,6 @@ export function updateLight(id, attr, val) {
       body: JSON.stringify({[attr]: val})
     })
       .then(res => res.json())
-      .then(json => dispatch({type: 'TOGGLE_LIGHT', payload: json}))
+      .then(json => dispatch({type: 'UPDATE_LIGHT', payload: json}))
   }
 }
