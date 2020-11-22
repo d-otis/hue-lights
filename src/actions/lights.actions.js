@@ -24,3 +24,9 @@ export function toggleLight(id, isOn) {
       .then(json => dispatch({type: 'TOGGLE_LIGHT', payload: json}))
   }
 }
+
+export function updateBrightness(id, brightness) {
+  return dispatch => {
+    fetch(`${BASE_URL}/${USERNAME}/lights/${id}/state`)
+  }
+}
