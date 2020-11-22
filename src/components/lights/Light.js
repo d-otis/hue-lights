@@ -1,5 +1,6 @@
 import React from 'react'
 import PowerSwitch from './PowerSwitch'
+import BrightnessSlider from './BrightnessSlider'
 
 const Light = ({ id, light, ...otherProps }) => {
 
