@@ -2,7 +2,12 @@ import React from 'react'
 import Slider from '@material-ui/core/Slider'
 import { withStyles } from '@material-ui/core/styles';
 
-const BrightnessSlider = () => {
+const BrightnessSlider = ({ id, brightness, updateBrightness }) => {
+
+  const handleChange = e => {
+    const newVal = Number(e.changedTouches[0].target.ariaValueNow) * 100
+    updateBrightness(id, newVal)
+  }
 
   const PrettoSlider = withStyles({
     root: {
