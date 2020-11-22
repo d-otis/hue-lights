@@ -14,10 +14,11 @@ const lightsReducer = ( state = INITIAL_STATE, action ) => {
       let response = action.payload[0].success
       let returnedStatus = Object.values(response)[0]
       let lightId = Object.keys(response)[0].split('/')[2]
+      let attr = Object.keys(response)[0].split('/')[4]
 
       return {
         ...state,
-        ...state[lightId].state.on = returnedStatus
+        ...state[lightId].state[attr] = returnedStatus
       }
     default: 
       return state
