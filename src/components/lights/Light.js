@@ -5,11 +5,6 @@ const Light = ({ id, light, ...otherProps }) => {
 
   const { name, state: { on: isOn } } = light
 
-  // const handleClick = () => {
-  //   toggleLight(id, !isOn)
-  // }
-  console.log(`${name} == ${isOn ? 'ON' : 'OFF' }`)
-
   return(
     <React.Fragment>
       <h1 style={{color: isOn ? 'green' : 'red' }} > {name} [{id}]</h1>
