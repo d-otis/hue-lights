@@ -11,7 +11,6 @@ export function fetchLights() {
 }
 
 export function updateLight(id, attr, val) {
-
   return dispatch => {
     fetch(`${BASE_URL}/${USERNAME}/lights/${id}/state`, {
       method: "PUT",
