@@ -10,7 +10,7 @@ const lightsReducer = ( state = INITIAL_STATE, action ) => {
         ...state,
         ...action.payload
       }
-    case 'TOGGLE_LIGHT':
+    case 'UPDATE_LIGHT':
       let response = action.payload[0].success
       let returnedStatus = Object.values(response)[0]
       let lightId = Object.keys(response)[0].split('/')[2]
