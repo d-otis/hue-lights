@@ -6,7 +6,7 @@ import { updateBrightness } from '../../actions/lights.actions'
 
 const Light = ({ id, light, toggleLight, updateBrightness }) => {
 
-  const { name, state: { on: isOn } } = light
+  const { name, state: { on: isOn, bri: brightness } } = light
 
   const handleClick = () => {
     toggleLight(id, !isOn)
