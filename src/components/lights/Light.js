@@ -4,7 +4,7 @@ import BrightnessSlider from './BrightnessSlider'
 
 const Light = ({ id, light, ...otherProps }) => {
 
-  const { name, state: { on: isOn } } = light
+  const { name, state: { on: isOn, bri: brightness } } = light
 
   return(
     <React.Fragment>
