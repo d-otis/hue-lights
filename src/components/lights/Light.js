@@ -1,7 +1,7 @@
 import React from 'react'
 import PowerSwitch from './PowerSwitch'
 
-const Light = ({ id, light, toggleLight }) => {
+const Light = ({ id, light, ...otherProps }) => {
 
   const { name, state: { on: isOn } } = light
 
@@ -12,8 +12,8 @@ const Light = ({ id, light, toggleLight }) => {
 
   return(
     <React.Fragment>
-      <h1 style={{color: isOn ? 'green' : 'red' }} > {name} </h1>
-      <PowerSwitch isOn={isOn} toggleLight={toggleLight} id={id} />
+      <h1 style={{color: isOn ? 'green' : 'red' }} > {name} [{id}]</h1>
+      <PowerSwitch isOn={isOn} {...otherProps} id={id} />
       {/* <BrightnessSlider brightness={brightness} id={id} updateBrightness={updateBrightness} /> */}
       <hr/>
     </React.Fragment>
