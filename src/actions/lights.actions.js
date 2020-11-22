@@ -19,7 +19,7 @@ export function updateLight(id, attr, val) {
         "Accept": "application/json",
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({"on": isOn})
+      body: JSON.stringify({[attr]: val})
     })
       .then(res => res.json())
       .then(json => dispatch({type: 'TOGGLE_LIGHT', payload: json}))
