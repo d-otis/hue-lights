@@ -3,8 +3,7 @@ import React from 'react'
 const BrightnessSlider = ({ id, brightness, updateLight }) => {
 
   const handleChange = e => {
-    const newVal = Number(e.changedTouches[0].target.ariaValueNow) * 100
-    updateBrightness(id, newVal)
+    updateLight(id, "bri", Number(e.target.value))
   }
 
   return(
