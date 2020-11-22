@@ -1,5 +1,6 @@
 import React from 'react'
 import PowerSwitch from './powerSwitch'
+import BrightnessSlider from './BrightnessSlider'
 
 const Light = ({ id, light, toggleLight }) => {
 
@@ -13,6 +14,7 @@ const Light = ({ id, light, toggleLight }) => {
     <React.Fragment>
       <h1 style={{color: isOn ? 'green' : 'red' }} > {name} </h1>
       <PowerSwitch isOn={isOn} handleClick={handleClick} />
+      <BrightnessSlider />
       <hr/>
     </React.Fragment>
   )
