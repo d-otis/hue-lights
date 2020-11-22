@@ -4,7 +4,6 @@ import { toggleLight } from '../actions/lights.actions'
 import { connect } from 'react-redux'
 
 const LightsContainer = ({ lights, ...otherProps }) => {
-
   return (
     Object.keys(lights).map(id => <Light key={id} id={id} light={lights[id]} {...otherProps} />)
   )
