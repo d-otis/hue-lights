@@ -41,7 +41,7 @@ const BrightnessSlider = ({ id, brightness, updateBrightness }) => {
 
 
   return(
-    <PrettoSlider valueLabelDisplay="auto" aria-label="pretto slider" defaultValue={20} />
+    <PrettoSlider valueLabelDisplay="auto" aria-label="pretto slider" value={brightness / 100} onChange={handleChange} />
   )
 }
 
