@@ -1,6 +1,6 @@
 import React from 'react'
 import Light from '../components/lights/Light'
-import { toggleLight } from '../actions/lights.actions'
+import { updateLight } from '../actions/lights.actions'
 import { connect } from 'react-redux'
 
 const LightsContainer = ({ lights, ...otherProps }) => {
@@ -9,4 +9,4 @@ const LightsContainer = ({ lights, ...otherProps }) => {
   )
 }
 
-export default connect(null, { toggleLight })(LightsContainer)
+export default connect(null, { updateLight })(LightsContainer)
