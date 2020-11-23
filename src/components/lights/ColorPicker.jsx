@@ -9,8 +9,6 @@ const ColorPicker = ({ id, hue, sat, updateLight }) => {
     updateLight(id, "hue", scaledHue)
   }
 
-const ColorPicker = ({ hue, sat }) => {
-  debugger
   return(
     <HuePicker />
   )
