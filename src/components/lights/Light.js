@@ -11,7 +11,9 @@ const Light = ({ id, light, ...otherProps }) => {
     <React.Fragment>
       <h1 style={{color: isOn ? 'green' : 'red' }} > {name} [{id}]</h1>
       <PowerSwitch isOn={isOn} {...otherProps} id={id} />
-      <ColorPicker {...otherProps} hue={hue} sat={sat} />
+      <br />
+      <ColorPicker {...otherProps} hue={hue} sat={sat} id={id} />
+      <br />
       <BrightnessSlider brightness={brightness} id={id} {...otherProps} />
       <hr/>
     </React.Fragment>
