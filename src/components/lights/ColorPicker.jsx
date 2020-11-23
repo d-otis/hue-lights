@@ -10,7 +10,7 @@ const ColorPicker = ({ id, hue, sat, updateLight }) => {
   }
 
   return(
-    <HuePicker />
+    <HuePicker color={"#fff"} onChangeComplete={handleChange} />
   )
 }
 
