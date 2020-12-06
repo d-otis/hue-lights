@@ -1,11 +1,11 @@
-const scale = (inputY, yRange = [0, 360], xRange = [0, 65535]) => {
-  const [xMin, xMax] = xRange;
-  const [yMin, yMax] = yRange;
+const scale = (input, inputRange = [0, 360], outputRange = [0, 65535]) => {
+  const [outputMin, outputMax] = outputRange;
+  const [inputMin, inputMax] = inputRange;
 
-  const percent = (inputY - yMin) / (yMax - yMin);
-  const outputX = percent * (xMax - xMin) + xMin;
+  const percent = (input - inputMin) / (inputMax - inputMin);
+  const output = percent * (outputMax - outputMin) + outputMin;
 
-  return outputX;
+  return output;
 };
 
 export default scale
