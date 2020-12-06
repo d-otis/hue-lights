@@ -9,8 +9,22 @@ const ColorPicker = ({ id, hue, sat, updateLight }) => {
     updateLight(id, "hue", scaledHue)
   }
 
+  const calibratedColor = color => {
+    const newColor = scale(color, "toPicker")
+
+    return { 
+      h: newColor, 
+      s: 1, 
+      l: 0.5, 
+      a: 1 
+    }
+  }
+
   return(
-    <HuePicker color={"#fff"} onChangeComplete={handleChange} />
+    <HuePicker 
+      color={calibratedColor(hue)} 
+      onChangeComplete={handleChange} 
+    />
   )
 }
 
