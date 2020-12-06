@@ -1,5 +1,5 @@
 const scale = (input, config) => {
-  
+
   if (config !== 'toBulb' && config !== 'toPicker') { 
     console.error("scale() config string should be either 'toBulb' or 'toPicker'")
     return
