@@ -5,9 +5,11 @@ const groupsReducer = ( state = INITIAL_STATE, action ) => {
     case 'LOADING_GROUPS':
       console.log('loading groups')
       return state
+      
     case 'SET_GROUPS':
       debugger
       return state
+
     default:
       return state
   }
