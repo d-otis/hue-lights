@@ -3,12 +3,14 @@ import LightsContainer from './containers/LightsContainer'
 import GroupsContainer from './containers/GroupsContainer'
 import { connect } from 'react-redux'
 import { fetchLights } from './actions/lights.actions'
+import { fetchGroups } from './actions/groups.actions'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
 class App extends Component {
 
   componentDidMount() {
     this.props.fetchLights()
+    this.props.fetchGroups()
   }
 
   render() {
@@ -29,8 +31,9 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    lights: state.lights
+    lights: state.lights,
+    groups: state.groups
   }
 }
 
-export default connect(mapStateToProps, { fetchLights })(App);
+export default connect(mapStateToProps, { fetchLights, fetchGroups })(App);
