@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   render() {
-    const { lights } = this.props
+    const { lights, groups } = this.props
 
     return (
       <Router>
