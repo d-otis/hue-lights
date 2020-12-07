@@ -6,7 +6,6 @@ export function fetchGroups() {
     dispatch({type: 'LOADING_GROUPS'})
     fetch(`${BASE_URL}/${USERNAME}/groups`)
       .then(res => res.json())
-      .then(json => console.log(json))
-      // .then(json => dispatch({type: 'SET_GROUPS', payload: json}))
+      .then(json => dispatch({type: 'SET_GROUPS', payload: json}))
   }
 }
