@@ -24,7 +24,7 @@ class App extends Component {
           <li><Link to="/groups">Groups</Link></li>
         </ul>
         <Route path="/lights" render={renderProps => <LightsContainer {...renderProps} lights={lights} />} />
-        <Route path="/groups" render={renderProps => <GroupsContainer {...renderProps} groups={groups} />} />
+        <Route path="/groups" render={renderProps => <GroupsContainer {...renderProps} groups={groups} lights={lights} />} />
       </Router>
     );
   }
